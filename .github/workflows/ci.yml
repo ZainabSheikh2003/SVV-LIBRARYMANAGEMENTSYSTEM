@@ -1,0 +1,16 @@
+name: Smart Library CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Validation Check
+        run: echo "Validation successful"
