@@ -1,0 +1,39 @@
+types
+
+Book = token;
+Student = token;
+
+state LibraryState of
+  issued : map Book to Student
+
+inv mk_LibraryState(issued) ==
+(
+  forall s in set rng issued &
+    card {b | b in set dom issued & issued(b) = s} <= 3
+)
+
+end
+
+operations
+
+IssueBook : Book * Student ==> ()
+IssueBook(b, s) ==
+(
+  issued := issued munion {b |-> s}
+)
+
+pre b not in set dom issued and
+    card {x | x in set dom issued & issued(x) = s} < 3
+
+post b in set dom issued;
+
+
+ReturnBook : Book ==> ()
+ReturnBook(b) ==
+(
+  issued := {b} <-: issued
+)
+
+pre b in set dom issued
+
+post b not in set dom issued;
