@@ -1,22 +1,53 @@
 # Smart Library Management System
 
-SVV Lab Semester Project
+## Project Overview
+This project presents a formally verified Smart Library Management System developed for the Software Verification and Validation (SVV) Lab.
 
-## Features
-- Book Issue & Return
-- Barcode Scanning
-- Online Fine Payment
-- Notifications
+The system focuses on correctness, consistency, and verification of library operations using formal methods.
+
+## Core Features
+- Book Issuing
+- Book Returning
+- Book Availability Checking
+- Maximum 3 Books Rule
+- One Book → One Student
+- Fine Management
+- Barcode Validation
+- Notifications and Reminders
 
 ## Formal Methods Used
-- Z Notation
-- VDM
-- Alloy Analyzer
+### Requirement Engineering
+- Software Requirement Specification (SRS)
+- Requirement Defect Taxonomy
+- GitHub Issue Tracking
 
-## Repository Structure
-- requirements
-- z-model
-- vdm-spec
-- alloy-model
-- validation
-- ci-pipeline
+### Z Notation
+- State schema
+- Operations
+- Constraints
+
+### VDM-SL
+- Preconditions
+- Postconditions
+- Functional verification
+
+### Alloy Analyzer
+- Relational modeling
+- Constraint verification
+- Counterexample analysis
+
+### Validation & Security
+- Validation checklist
+- GitHub Actions (CI)
+- OWASP ZAP Report
+
+## Tools Used
+- GitHub
+- Z Tool
+- VDM Pad / Overture
+- Alloy Analyzer
+- GitHub Actions
+- OWASP ZAP
+
+## Conclusion
+The project successfully verifies system correctness using formal verification techniques.
